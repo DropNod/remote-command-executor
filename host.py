@@ -12,7 +12,6 @@ def execute_command(command):
         completed_process = subprocess.run(command, shell=True, capture_output=True, text=True)
         output = completed_process.stdout
         exit_code = completed_process.returncode
-        print(exit_code)
         return output, exit_code
     except subprocess.CalledProcessError as e:
         return e.output
